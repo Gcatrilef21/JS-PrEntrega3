@@ -59,9 +59,53 @@ body .header .slogan {
 }
 body .principal {
   background-color: #F2D194;
-  height: 700px;
+  height: 750px;
+  display: flex;
+  justify-content: center;
+}
+body .principal .div-card {
+  height: 300px;
+  width: 180px;
+  text-align: center;
+  background-color: #D98F4E;
+  border: 2px solid #A65729;
+  border-radius: 10px;
+  box-shadow: 10px 6px 6px #D98F4E;
+  font-size: 20px;
+  transition: 1s ease-in-out;
+}
+body .principal .div-card .producto {
+  color: #F2F2F2;
+  text-transform: capitalize;
+  text-shadow: 0 0 8px #0D0D0D;
+  font-family: "Rancho", cursive;
+  letter-spacing: 7px;
+}
+body .principal .div-card .precio {
+  color: #73341D;
+  font-family: "Martel", serif;
+  margin-top: 30;
+}
+body .principal .div-card button {
+  color: #F2F2F2;
+  border: 2px solid #F2F2F2;
+  border-radius: 5px;
+  text-transform: uppercase;
+  -webkit-text-decoration: dotted;
+          text-decoration: dotted;
+}
+body .principal .div-card:hover {
+  background-color: #F2D194;
+  box-shadow: 0px 10px 10px #A65729;
+  transition: 1.5s ease-in-out;
 }
 body .footer {
-  background-color: #F2D194;
-  height: 200px;
+  background-color: #D98F4E;
+  height: 150px;
+}
+body .footer p {
+  height: 90px;
+  text-align: center;
+  color: #F2F2F2;
+  text-transform: capitalize;
 }/*# sourceMappingURL=style.css.map */

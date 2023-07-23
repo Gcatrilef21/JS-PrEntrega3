@@ -86,12 +86,63 @@ body{
     }
     .principal{
         background-color: $color2;
-        height: 700px;
+        height: 750px;
+        display: flex;
+        justify-content: center;
+
+
+        .div-card{
+            height: 300px;
+            width: 180px;
+            text-align:center;
+            background-color: $color3;
+            border: 2px solid $color4;
+            border-radius: 10px;
+            box-shadow:10px 6px 6px $color3 ;
+            font-size: 20px;
+            transition: 1s ease-in-out;
+
+            .producto{
+                color:$color1;
+                text-transform: capitalize;
+                text-shadow: 0 0 8px $color6;
+                font-family: $font3;
+                letter-spacing: 7px;
+            }
+
+            .precio{
+                color: $color5;
+                font-family: $font2;
+                margin-top: 30;
+            }
+
+            button{
+                color: $color1;
+                border: 2px solid $color1;
+                border-radius: 5px;
+                text-transform: uppercase;
+                text-decoration: dotted;
+            }
+        }
+        .div-card:hover{
+            background-color: $color2;
+            box-shadow:0px 10px 10px $color4;
+            transition: 1.5s ease-in-out;
+        }
+
     }
     
     .footer{
-        background-color: $color2;
-        height: 200px;
+        background-color: $color3;
+        height: 150px;
+
+        p{
+            height: 90px;
+            text-align: center;
+            color: $color1;
+            text-transform: capitalize;
+        }
+
     }
 
 }
