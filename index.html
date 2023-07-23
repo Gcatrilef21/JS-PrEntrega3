@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <script src="./JS/main.js"></script>
+    <script defer src="./JS/main.js"></script>
     <script src="./JS/index.js"></script>
     <link rel="shortcut icon" href="./img/cheese.svg" type="image/x-icon">
     <link rel="stylesheet" href="./CSS/style.css">
@@ -22,20 +22,19 @@
                 <p class="nameIzq">mmm <span class="nameDer">cheese</span> </p>
             </a>
             <h2 class="slogan"> la mejor seleccion de quesos </h2>
+            <section class="search">
+                <a class="cart" href="./cart.html"><i class="bi bi-cart4"></i></a>
+                <input type="search" id="inputSearch" placeholder="🧀Buscar ">
+            </section>
         </div>
-        <section class="cart">
-            <a href="./cart.html"><i class="bi bi-cart4"></i></a>
-            <input type="search" id="inputSearch" placeholder="🔍 Buscar 🧀 ">
-        </section>
     </header>
     <main>
-        <div class="principal">
-            <br>
+        <div class="principal" id="principal">
                 <div class="div-card">
                     <div class="imagen">🧀🧀</div>
                     <div class="producto"><p>queso rosa</p></div>
                     <div class="precio"><p>$ 1234</p></div>
-                    <div class="boton"><button id="">add</button></div>
+                    <div class="boton"><button id="agregar">add</button></div>
                 </div>
             </div>
         </div>

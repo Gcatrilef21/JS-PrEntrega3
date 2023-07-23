@@ -83,24 +83,43 @@ body{
             text-transform:capitalize;
             letter-spacing: 9px;
         }
+
+        .cart{
+            height: 20px ;
+            color:grey;
+            font-size: 30px;
+            margin-right: 50px;
+            float: right;
+        }
+        input{
+            height: 40px;
+            width: 380px;
+            margin-left: 20px;
+            font-size: 18px;
+            float: left;
+            text-align: center;
+            border-radius: 5px;
+            letter-spacing: 10px;
+        }
     }
+
     .principal{
         background-color: $color2;
         height: 750px;
         display: flex;
         justify-content: center;
 
-
         .div-card{
+            margin-top: 140px;
             height: 300px;
             width: 180px;
             text-align:center;
             background-color: $color3;
-            border: 2px solid $color4;
+            border: 2px solid $color5;
             border-radius: 10px;
             box-shadow:10px 6px 6px $color3 ;
             font-size: 20px;
-            transition: 1s ease-in-out;
+            transition: 20ms ease-in;
 
             .producto{
                 color:$color1;
@@ -117,17 +136,29 @@ body{
             }
 
             button{
-                color: $color1;
-                border: 2px solid $color1;
+                height: 40px;
+                width: 100px;
+                color: $color5;
+                background-color: $color2;
+                border: 1px solid $color5;
+                box-shadow: 2px 6px $color4;
+                font-size: 18px;
                 border-radius: 5px;
-                text-transform: uppercase;
-                text-decoration: dotted;
+                text-transform: capitalize;
+                transition: 0.9s ease-out;
+            }
+            button:hover{
+                background-color: $color4;
+                box-shadow: 2px 6px $color3;
+                border-radius: 5px;
+                color: $color1;
+                transition: 1s ease-in-out;
             }
         }
         .div-card:hover{
             background-color: $color2;
             box-shadow:0px 10px 10px $color4;
-            transition: 1.5s ease-in-out;
+            transition: 10ms ease-out;
         }
 
     }
@@ -141,6 +172,7 @@ body{
             text-align: center;
             color: $color1;
             text-transform: capitalize;
+            text-shadow:10px 6px 6px $color4;
         }
 
     }

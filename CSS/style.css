@@ -57,6 +57,23 @@ body .header .slogan {
   text-transform: capitalize;
   letter-spacing: 9px;
 }
+body .header .cart {
+  height: 20px;
+  color: grey;
+  font-size: 30px;
+  margin-right: 50px;
+  float: right;
+}
+body .header input {
+  height: 40px;
+  width: 380px;
+  margin-left: 20px;
+  font-size: 18px;
+  float: left;
+  text-align: center;
+  border-radius: 5px;
+  letter-spacing: 10px;
+}
 body .principal {
   background-color: #F2D194;
   height: 750px;
@@ -64,15 +81,16 @@ body .principal {
   justify-content: center;
 }
 body .principal .div-card {
+  margin-top: 140px;
   height: 300px;
   width: 180px;
   text-align: center;
   background-color: #D98F4E;
-  border: 2px solid #A65729;
+  border: 2px solid #73341D;
   border-radius: 10px;
   box-shadow: 10px 6px 6px #D98F4E;
   font-size: 20px;
-  transition: 1s ease-in-out;
+  transition: 20ms ease-in;
 }
 body .principal .div-card .producto {
   color: #F2F2F2;
@@ -87,17 +105,28 @@ body .principal .div-card .precio {
   margin-top: 30;
 }
 body .principal .div-card button {
-  color: #F2F2F2;
-  border: 2px solid #F2F2F2;
+  height: 40px;
+  width: 100px;
+  color: #73341D;
+  background-color: #F2D194;
+  border: 1px solid #73341D;
+  box-shadow: 2px 6px #A65729;
+  font-size: 18px;
   border-radius: 5px;
-  text-transform: uppercase;
-  -webkit-text-decoration: dotted;
-          text-decoration: dotted;
+  text-transform: capitalize;
+  transition: 0.9s ease-out;
+}
+body .principal .div-card button:hover {
+  background-color: #A65729;
+  box-shadow: 2px 6px #D98F4E;
+  border-radius: 5px;
+  color: #F2F2F2;
+  transition: 1s ease-in-out;
 }
 body .principal .div-card:hover {
   background-color: #F2D194;
   box-shadow: 0px 10px 10px #A65729;
-  transition: 1.5s ease-in-out;
+  transition: 10ms ease-out;
 }
 body .footer {
   background-color: #D98F4E;
@@ -108,4 +137,5 @@ body .footer p {
   text-align: center;
   color: #F2F2F2;
   text-transform: capitalize;
+  text-shadow: 10px 6px 6px #A65729;
 }/*# sourceMappingURL=style.css.map */
