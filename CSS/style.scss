@@ -31,12 +31,6 @@ $font4: 'Spectral', serif;
     box-sizing: border-box;
 }
 
-/* @mixin size ($hei, $wid){
-    height: $hei;
-    width: $wid;
-}
- */
-
 body{
     height: 1200px;
     width: auto;
@@ -86,7 +80,7 @@ body{
 
         .cart{
             height: 20px ;
-            color:grey;
+            color:$color1;
             font-size: 30px;
             margin-right: 50px;
             float: right;
@@ -109,7 +103,7 @@ body{
         display: flex;
         justify-content: center;
 
-        .div-card{
+        .card{
             margin-top: 140px;
             height: 300px;
             width: 180px;
@@ -119,7 +113,7 @@ body{
             border-radius: 10px;
             box-shadow:10px 6px 6px $color3 ;
             font-size: 20px;
-            transition: 20ms ease-in;
+            transition: 0.8s ease-in;
 
             .producto{
                 color:$color1;
@@ -155,10 +149,10 @@ body{
                 transition: 1s ease-in-out;
             }
         }
-        .div-card:hover{
+        .card:hover{
             background-color: $color2;
             box-shadow:0px 10px 10px $color4;
-            transition: 10ms ease-out;
+            transition: 1.2s ease-in-out;
         }
 
     }

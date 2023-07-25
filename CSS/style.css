@@ -9,11 +9,6 @@ font-family: 'Spectral', serif; */
   box-sizing: border-box;
 }
 
-/* @mixin size ($hei, $wid){
-    height: $hei;
-    width: $wid;
-}
- */
 body {
   height: 1200px;
   width: auto;
@@ -59,7 +54,7 @@ body .header .slogan {
 }
 body .header .cart {
   height: 20px;
-  color: grey;
+  color: #F2F2F2;
   font-size: 30px;
   margin-right: 50px;
   float: right;
@@ -80,7 +75,7 @@ body .principal {
   display: flex;
   justify-content: center;
 }
-body .principal .div-card {
+body .principal .card {
   margin-top: 140px;
   height: 300px;
   width: 180px;
@@ -90,21 +85,21 @@ body .principal .div-card {
   border-radius: 10px;
   box-shadow: 10px 6px 6px #D98F4E;
   font-size: 20px;
-  transition: 20ms ease-in;
+  transition: 0.8s ease-in;
 }
-body .principal .div-card .producto {
+body .principal .card .producto {
   color: #F2F2F2;
   text-transform: capitalize;
   text-shadow: 0 0 8px #0D0D0D;
   font-family: "Rancho", cursive;
   letter-spacing: 7px;
 }
-body .principal .div-card .precio {
+body .principal .card .precio {
   color: #73341D;
   font-family: "Martel", serif;
   margin-top: 30;
 }
-body .principal .div-card button {
+body .principal .card button {
   height: 40px;
   width: 100px;
   color: #73341D;
@@ -116,17 +111,17 @@ body .principal .div-card button {
   text-transform: capitalize;
   transition: 0.9s ease-out;
 }
-body .principal .div-card button:hover {
+body .principal .card button:hover {
   background-color: #A65729;
   box-shadow: 2px 6px #D98F4E;
   border-radius: 5px;
   color: #F2F2F2;
   transition: 1s ease-in-out;
 }
-body .principal .div-card:hover {
+body .principal .card:hover {
   background-color: #F2D194;
   box-shadow: 0px 10px 10px #A65729;
-  transition: 10ms ease-out;
+  transition: 1.2s ease-in-out;
 }
 body .footer {
   background-color: #D98F4E;
