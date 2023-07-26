@@ -2,7 +2,7 @@ const logoImagen = 'img/logo.svg'
 const  logo = document.querySelector('img.imglogo#imglogo')
 const carro = document.querySelector('i.bi-cart4#carrito')
 const cantidad = document.querySelector('span.itemCarrito#itemCarrito')
-const principal = document.querySelector('div.principal#principal')
+const principal = document.querySelector('div.principal')
 const buscar = document.querySelector('input#inputSearch')
 const boton = document.querySelector('button#add.boton')
 const tabla = document.querySelector('tbody#tablaCart')
@@ -16,7 +16,7 @@ logo.src = logoImagen
 function showCartUnits (){
     cantidad.innerHTML = carrito.length
 }
-showCartUnits ()
+showCartUnits (carrito.length)
 
 // Plantillas de Productos (Tamplate String)
 function retornarCards (queso){
@@ -34,31 +34,33 @@ function retornarCards (queso){
             </div>`
 }
 
-// Plantilla de Carrito (Tamplate String)
-
-
 // Cargar Productos en HTML
 function cargarProductos(array){
     principal.innerHTML = ''
-    array.forEach((queso) => {
-        principal.innerHTML += retornarCards (queso)
-    });
+    if(array.length > 0){
+        array.forEach((queso) => {
+            principal.innerHTML += retornarCards (queso)
+            activarClickBotones()
+        })
+    }else {
+        alert('No hay Prodcutos que mostrar')
+    }
 }
-cargarProductos(quesos)
 
-//
+
+// function activar Botones
 function activarClickBotones(){
     const botones = document.querySelectorAll('button.add')
     botones.forEach((boton)=>{
         boton.addEventListener('click', ()=>{
-            alert('Se ha agregado con exito')
-            let addProd = quesos.find((queso) => queso.id === parseInt((boton.id)))
+            const addProd = quesos.find((queso) => queso.id === parseInt((boton.id)))
+            // console.log(addProd) Prueba de codigo
             carrito.push(addProd)
-            //console.table(carrito)
+            guardarLocalStorage()
         })
     })
 }
-activarClickBotones()
+
 
                         /* E V E N T O S  */
 
@@ -71,6 +73,13 @@ carro.addEventListener('mouseover', () => {
 })
 
 buscar.addEventListener('search', ()=>{
-    const resultado = quesos.filter((queso) => queso.nombre.toLowerCase().includes(buscar.value.toLowerCase()))
-    cargarProductos(resultado)
+    if (buscar.value.trim() !== ""){
+        const resultado = quesos.filter((queso) => queso.nombre.toLowerCase().includes(buscar.value.trim().toLowerCase()))
+        cargarProductos(resultado)
+    }else{
+        cargarProductos(quesos)
+    }
 })
+
+
+cargarProductos(quesos)

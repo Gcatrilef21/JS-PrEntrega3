@@ -155,6 +155,15 @@ body{
             transition: 1.2s ease-in-out;
         }
 
+        thead {
+            font-weight: 800;
+            font-size: larger;
+        }
+        
+        tbody tr:hover {
+            background: rgba(0, 0, 0, 0.679);
+        }
+
     }
     
     .footer{

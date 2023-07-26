@@ -123,6 +123,13 @@ body .principal .card:hover {
   box-shadow: 0px 10px 10px #A65729;
   transition: 1.2s ease-in-out;
 }
+body .principal thead {
+  font-weight: 800;
+  font-size: larger;
+}
+body .principal tbody tr:hover {
+  background: rgba(0, 0, 0, 0.679);
+}
 body .footer {
   background-color: #D98F4E;
   height: 150px;
