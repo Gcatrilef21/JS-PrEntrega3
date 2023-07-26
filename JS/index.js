@@ -1,4 +1,5 @@
 const carrito = []
+
 const quesos = [ {id:1, img: 'img/american.png',nombre:'AMERICAN', precio: 9950, origen: 'Inglaterra'},
                  {id:2, img: 'img/blue.png',nombre:'BLUE', precio:18990, origen:'Francia'},
                  {id:3, img: 'img/brie.png',nombre:'BRIE', precio:19990, origen:'Francia'},

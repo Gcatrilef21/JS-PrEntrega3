@@ -2,7 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">s
+    <script src="./JS/index.js"></script>
+    <script defer src="./JS/main.js"></script>
     <link rel="shortcut icon" href="./img/cheese.svg" type="image/x-icon">
     <link rel="stylesheet" href="./CSS/style.css">
     <title>MMMCarrito</title>
@@ -11,18 +13,29 @@
     <header>
         <div class="header">
             <a href="./index.html">
-                <img class="imglogo" id="imglogo" src="./img/logo.svg" alt="queso">
+                <img class="imglogo" id="imglogo" src="" alt="queso">
                 <p class="nameIzq">mmm <span class="nameDer">cheese</span> </p>
             </a>
             <h2 class="slogan"> la mejor seleccion de quesos </h2>
-            <a href="./index.html">HOME</a>
+            <section class="search">
+                <a class="cart" href="./cart.html">
+                    <i class="bi bi-cart4" id="carrito"></i>
+                    <span class="itemCarrito" id="itemCarrito">0</span>
+                </a>
+                <input type="search" id="inputSearch" placeholder="🧀Buscar ">
+            </section>
         </div>
     </header>
     <main>
-        <p>Quezrpa</p>
+        <div class="principal" id="principal">
+            
+        </div>
     </main>
     <footer>
-        <p><strong>Quezrpa</strong></p>
+        <div class="footer">
+            <br>
+            <p><strong>MMMCheese by Gonzalo Catrilef <br>Comision 43130 👨‍💻</strong></p>
+        </div>
     </footer>
 </body>
 </html>
