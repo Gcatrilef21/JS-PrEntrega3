@@ -1,36 +1,53 @@
-/* const quesos = [ {id:1, nombre: 'AMERICAN CHEESE', precio: 9950, origen: 'Inglaterra'},
-                 {id:2, nombre:'BLUE CHEESE', precio:18990, origen:'Francia'},
-                 {id:3, nombre:'BRIE CHEESE', precio:19990, origen:'Francia'},
-                 {id:4, nombre:'CAMBERT CHEESE', precio:15990, origen:'Francia'},
-                 {id:5, nombre:'CHEEDAR CHEESE', precio:7980,origen:'Inglaterra'},
-                 {id:6, nombre:'EDAM CHEESE', precio:15990, origen:'Países Bajos'},
-                 {id:7, nombre:'GOUDA CHEESE', precio:5990, origen:'Países Bajos'},
-                 {id:8, nombre:'FETA CHEESE', precio:12990, origen:'Grecia'}] */
+const logoImagen = 'img/logo.svg'
+const logo = document.querySelector('img.imglogo#imglogo')
+const carro = document.querySelector('i.bi-cart4#carrito')
+const cantidad = document.querySelector('span.itemCarrito#itemCarrito')
+const principal = document.querySelector('div.principal#principal')
 
 
 
-const principal = document.querySelector('div#principal.principal')
-const cardBoton = document.querySelectorAll('buttton.boton#add')
-
-cardBoton.innerHTML = 'añadir'
+logo.src = logoImagen
 
 
-function mostrarPlantilla(queso){
+logo.addEventListener('mouseover', ()=>{
+    logo.title = 'Ir a Inicio'
+})
+
+carro.addEventListener('mouseover', () => {
+    carro.title = 'Ir a Carrito' 
+})
+
+                        /* F U N C I O N E S  */
+
+//Funcion Cantidad en Carrito
+function showCartUnits (){
+    cantidad.innerHTML = carrito.length
+}
+showCartUnits ()
+
+// Plantillas de Productos 
+function retornarCards (queso){
     return `<div class="card">
-                <div class="imagen">🧀🧀</div>
-                <div class="producto"><p>${queso.nombre}</p></div>
-                <div class="precio"><p>$ ${queso.precio}</p></div>
-                <div><button class="boton" id="add">add</button></div>
-            </div>    `
+                <img class="imgProduct" src="${queso.img}" alt="${queso.nombre}">
+                <div class="producto">
+                    <p>${queso.nombre}</p>
+                </div>
+                <div class="precio">
+                    <p>$${queso.precio}</p>
+                </div>
+                <div>
+                    <button class="boton" id="add">agregar</button>
+                </div>
+            </div>`
 }
 
-function cargarProductos(array){
+// Cargar Productos en HTML
+
+function cargarProductos(){
     principal.innerHTML = ''
-    array.forEach((queso) => {
-        principal.innerHTML += mostrarPlantilla(queso)
-        
+    quesos.forEach((queso) => {
+        principal.innerHTML += retornarCards (queso)
     });
 }
 
 cargarProductos(quesos)
-
